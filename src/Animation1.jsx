@@ -7,7 +7,7 @@ const BubbleSplit = () => {
   const [bubbles, setBubbles] = useState([]);
   const [screenWidth, setScreenWidth] = useState(390); // iPhone 12 Pro width
   const [screenHeight, setScreenHeight] = useState(844); // iPhone 12 Pro height
-  const popSound = new Audio("/recording.m4a"); // Replace with actual sound path
+  const popSound = new Audio(process.env.PUBLIC_URL + "/recording.m4a"); // Replace with actual sound path
 
   useEffect(() => {
     setBubbles([{ id: 1, x: screenWidth / 2 - 200, y: screenHeight / 2 - 200, size: 300 }]);
